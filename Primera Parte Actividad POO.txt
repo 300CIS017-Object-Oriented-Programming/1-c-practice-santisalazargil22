@@ -104,3 +104,48 @@ int main() {
     return 0;
 }
 
+// Functions
+
+int max_of_four(int a, int b, int c, int d){
+    int bigger;
+    cin >> a >> b >> c >> d;
+    bigger = a;
+    if(b>a){
+        bigger = b;
+        if(c>b){
+            bigger = c;
+            if(d>c){
+                bigger = d;
+            }
+        }
+    }
+    else if(c>a){
+        bigger = c;
+        if(b>c){
+            bigger = b;
+            if(d>b){
+                bigger = d;
+            }
+        }
+    }
+    else if(d>a){
+        bigger = d;
+        if(b>d){
+            bigger = b;
+            if(c>b){
+                bigger = c;
+            }
+        }
+    }
+    return bigger;
+}
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    return 0;
+}
+
+
