@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 // Santiago Salazar Gil
@@ -165,4 +166,21 @@ int main() {
     }   
     return 0;
 }
+
+// Strings
+
+int main() {
+    string a;
+    string b;
+    string copy;
+    cin >> a;
+    cin >> b;
+    cout << a.size() << " " << b.size() << "\n";
+    cout << a+b << "\n";
+    copy[0] = a[0];
+    a[0] = b[0];
+    b[0] = copy[0];
+    cout << a << " " << b << "\n";
+    return 0;
+}	
 
